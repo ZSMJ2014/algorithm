@@ -1,0 +1,15 @@
+*.iml
+*.xml.bak
+
+target
+.idea
+.arc
+
+# h2 temp db
+*.mv.db
+*.trace.db
+*.diff
+.arcconfig
+.classpath
+.project
+.settings/
