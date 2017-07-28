@@ -1,4 +1,4 @@
-public class MapAlgorithm {
+public class GraphAlgorithm {
 
     /**
      * prim 算法求最小生成树
@@ -38,5 +38,44 @@ public class MapAlgorithm {
                 }
             }
         }
+    }
+
+    /**
+     * Kruskal算法求最小生成树
+     */
+    public static void miniSpanTree_Kruskal(int[][] a, int vNum, int eNum) {
+        int i, n, m;
+        Edge[] edges = new Edge[eNum];
+        int[] parent = new int[vNum];
+
+    }
+
+    /**
+     * 图的遍历
+     */
+    public static void tranverseGraph(int[][] a, int vNum) {
+        boolean[] isVisited = new boolean[vNum];
+        DFS(a, 0, isVisited, vNum);
+    }
+
+    /**
+     * 递归深度优先遍历图
+     *
+     * @param start 起点
+     */
+    public static void DFS(int[][] a, int start, boolean[] isVisted, int vNum) {
+        isVisted[start] = true;
+        for (int j = 0; j < vNum; j++) {
+            if (a[start][j] < Integer.MAX_VALUE && !isVisted[j]) {
+                System.out.println("(" + start + "," + j + ")");
+                DFS(a, j, isVisted, vNum);
+            }
+        }
+    }
+
+    public static class Edge {
+        public int begin;
+        public int end;
+        public int weight;
     }
 }

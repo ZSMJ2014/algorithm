@@ -38,8 +38,10 @@ public class SortTest {
                 {Integer.MAX_VALUE,Integer.MAX_VALUE,Integer.MAX_VALUE,16,7,Integer.MAX_VALUE,19,0,Integer.MAX_VALUE},
                 {Integer.MAX_VALUE,12,8,21,Integer.MAX_VALUE,Integer.MAX_VALUE,Integer.MAX_VALUE,Integer.MAX_VALUE,0}
         };
+        System.out.println("深度优先遍历");
+        GraphAlgorithm.tranverseGraph(a, 9);
         System.out.println("Prim算法求最小生成树：");
-        MapAlgorithm.miniSpanTree_prim(a,9);
+        GraphAlgorithm.miniSpanTree_prim(a, 9);
     }
 
     public void printArray(int[] a){
